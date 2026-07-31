@@ -1,21 +1,50 @@
+import styled from "styled-components";
+import theme from "@/styles/theme";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+`
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  background-color: ${theme.colors.card};
+`
+const Page = styled.div`
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: ${theme.colors.white};
+`
+const Icon = styled.img`
+  width: 32px;
+  height: 32px;
+`
+
 const Pagination = () => {
   return (
-    <div className="mt-12 flex items-center justify-between">
+    <Container>
       {/* Prev */}
-      <button className="ml-20 flex size-18 items-center justify-center rounded-xl bg-[#1A1A2E]">
-        <img src="./PrevButton.png" alt="previous" className="size-8" />
-      </button>
+      <Button>
+        <Icon src="./PrevButton.png" alt="previous"/>
+      </Button>
 
       {/* Page */}
-      <div className="text-2xl font-semibold text-white">
-        2 <span className="text-gray-400">/ 50</span>
-      </div>
+      <Page>
+        2 <span>/ 50</span>
+      </Page>
 
       {/* Next */}
-      <button className="mr-20 flex size-18 items-center justify-center rounded-xl bg-[#1A1A2E]">
-        <img src="./NextButton.png" alt="next" className="size-8" />
-      </button>
-    </div>
+      <Button >
+        <Icon src="./NextButton.png" alt="next"  />
+      </Button>
+    </Container>
   );
 };
 

@@ -1,33 +1,57 @@
 import { useState } from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  position: relative;
+  cursor: pointer;
+`
+const Number = styled.span`
+  font-size: 160px;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px #4b456d;
+  position: absolute;
+  left: -30px;
+  bottom: 50px;
+  z-index: 0;
+`
+//Poster sài chung với PopularCard
+const Poster = styled.img`
+  position: relative;
+  z-index: 10;
+  margin-left: 10px;
+  height: 220px;
+  width: 150px; 
+  border-radius: 20px;
+  object-fit: cover;
+`
 
 const TrendingCard = ({ movie, index, setSelectedMovie }) => {
   const [posterError, setPosterError] = useState(false);
-
+  
   return (
-    <div
-      className="relative cursor-pointer"
+    <Container
       onClick={() => setSelectedMovie(movie)}
     >
-      <span className="trending-number absolute left-0 bottom-0">
+      <Number>
         {index + 1}
-      </span>
-
+      </Number>
       {movie.poster && !posterError ? (
-        <img
+        <Poster
           src={movie.poster}
           alt={movie.title}
           onError={() => setPosterError(true)}
-          className="relative z-10 ml-5 h-[220px] w-[150px] rounded-2xl object-cover"
         />
       ) : (
-        <div className="relative z-10 ml-5 flex h-[220px] w-[150px] items-center justify-center rounded-2xl bg-[#1A1A2E] text-center text-gray-400">
+        <Poster>
           <div>
-            <p className="font-semibold">Poster</p>
+            <p>Poster</p>
             <p>Not Available</p>
           </div>
-        </div>
+        </Poster>
       )}
-    </div>
+    </Container>
   );
 };
 

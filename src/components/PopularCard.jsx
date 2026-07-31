@@ -1,43 +1,77 @@
 import { useState } from "react";
+import styled from "styled-components";
+import theme from "@/styles/theme";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 24px;
+  margin-top: -50px;
+  background-color: ${theme.colors.card};
+  cursor: pointer;
+`
+const Poster = styled.img`
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+  object-fit: cover;
+  padding: 20px;
+`
+const Title = styled.h3`
+  font-size: 18px;
+  font-weight: 600;
+  color: ${theme.colors.white};
+  margin-left: 20px;
+`
+const RatingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: ${theme.colors.white};
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 10px
+`
+const StarImg = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+`
+const Rating = styled.span`
+  font-size: 14px;
+  color: ${theme.colors.white};
+`
 
 const PopularCard = ({ movie, setSelectedMovie }) => {
   const [posterError, setPosterError] = useState(false);
-  return (
-    <div
-      className="flex h-full flex-col rounded-2xl bg-[#1A1A2E] p-4 cursor-pointer"
-      onClick={() => setSelectedMovie(movie)}
-    >
+  return (  
+    <Container onClick={() => setSelectedMovie(movie)} >
       {movie.poster && !posterError ? (
-        <img
+        <Poster
           src={movie.poster}
           alt={movie.title}
           onError={() => setPosterError(true)}
-          className="h-[300px] w-full rounded-xl object-cover"
         />
       ) : (
-        <div className="flex h-[300px] w-full items-center justify-center rounded-xl bg-gray-700 text-center text-white">
+        <Poster>
           Poster
           <br />
           Not Available
-        </div>
+        </Poster>
       )}
-
-      <h3 className="mt-4 text-lg font-semibold text-white">{movie.title}</h3>
-
-      <div className="mt-auto flex items-center gap-2 pt-4 text-sm text-gray-400">
-        <img src="/star.svg" alt="star" className="size-4" />
-
-        <span className="text-white">{movie.rating}</span>
-
+      <Title>{movie.title}</Title>
+      <RatingWrapper>
+        <StarImg src="/star.svg" alt="star"/>
+        <Rating>{movie.rating}</Rating>
         <span>•</span>
-
         <span>{movie.category}</span>
-
         <span>•</span>
-
         <span>{movie.type}</span>
-      </div>
-    </div>
+      </RatingWrapper>
+    </Container>
   );
 };
 
