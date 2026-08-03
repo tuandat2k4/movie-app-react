@@ -6,7 +6,6 @@ const Hero = styled.div`
   gap: 8px;
   width: 100%;
 `;
-
 const Poster = styled.div`
   overflow: hidden;
   border-radius: 24px;

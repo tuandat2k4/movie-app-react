@@ -5,7 +5,7 @@ import theme from '@/styles/theme'
 
 const Main = styled.main`
   min-height: 100vh;
-  background: url('/public/BG.png') no-repeat center center;
+  background: url('/BG.png') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
