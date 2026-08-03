@@ -1,5 +1,5 @@
 import moviesData from "@/data/moviesData";
-import TrendingCard from "@/components/TrendingCard";
+import MovieCard from "@/components/MovieCard";
 import styled from "styled-components";
 import theme from "@/styles/theme";
 
@@ -25,11 +25,12 @@ const TrendingPage = ({ setSelectedMovie }) => {
       <Title>Trending</Title>
       <Container>
         {moviesData.slice(0, 6).map((movie, index) => (
-          <TrendingCard
+          <MovieCard
             key={movie.id}
             movie={movie}
             index={index}
             setSelectedMovie={setSelectedMovie}
+            style="trending"
           />
         ))}
       </Container>

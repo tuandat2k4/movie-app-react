@@ -1,5 +1,5 @@
 import moviesData from "@/data/moviesData";
-import PopularCard from "@/components/PopularCard";
+import MovieCard from "@/components/MovieCard";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -16,7 +16,6 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   row-gap: 100px;
-  
 `
 
 const PopularPage = ({ setSelectedMovie }) => {
@@ -25,7 +24,7 @@ const PopularPage = ({ setSelectedMovie }) => {
       <Title>Popular</Title>
       <Container>
         {moviesData.map((movie) => (
-          <PopularCard
+          <MovieCard
             key={movie.id}
             movie={movie}
             setSelectedMovie={setSelectedMovie}

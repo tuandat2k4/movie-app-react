@@ -30,17 +30,14 @@ const Icon = styled.img`
 const Pagination = () => {
   return (
     <Container>
-      {/* Prev */}
       <Button>
         <Icon src="./PrevButton.png" alt="previous"/>
       </Button>
 
-      {/* Page */}
       <Page>
         2 <span>/ 50</span>
       </Page>
 
-      {/* Next */}
       <Button >
         <Icon src="./NextButton.png" alt="next"  />
       </Button>

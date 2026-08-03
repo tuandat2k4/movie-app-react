@@ -5,9 +5,11 @@ const theme = {
     colors: {
       background: '#0f0f23',
       text: '#fff',
-      purple: '#9a8bef',
+      purple: '#D6C7FF',
       black: '#000',
-      card: '#191927',  
+      card: '#191927', 
+      textInfoMovie: "#A8B5DB",
+
     },
   };
   

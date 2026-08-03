@@ -7,32 +7,4 @@ body {
   background: #030014;
   font-family: "DM Sans", sans-serif;
 }
-/* Container dùng chung */
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: -100px;
-  padding-right: -100px;
-}
 
-.trending-number {
-  font-size: 160px;
-  font-weight: 900;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 2px #4b456d;
-  position: absolute;
-  left: -30px;
-  bottom: 50px;
-  z-index: 0;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}

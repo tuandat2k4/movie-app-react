@@ -10,7 +10,7 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedMovie, setSelectedMovie] = useState(null);
   return (
-    <div className="">
+    <div>
       {/* home page */}
       <HomePage searchInput={searchInput} setSearchInput={setSearchInput} />
 
