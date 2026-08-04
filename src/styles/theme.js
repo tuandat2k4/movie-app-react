@@ -9,7 +9,6 @@ const theme = {
       black: '#000',
       card: '#191927', 
       textInfoMovie: "#A8B5DB",
-
     },
   };
   

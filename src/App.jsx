@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-import Pagination from "@/components/Pagination";
 import MovieModal from "@/components/MovieModal";
 import HomePage from "@/pages/HomePage/HomePage";
 import TrendingPage from "@/pages/TrendingPage/TrendingPage";
@@ -18,10 +16,7 @@ function App() {
       <TrendingPage setSelectedMovie={setSelectedMovie} />
 
       {/* popular */}
-      <PopularPage setSelectedMovie={setSelectedMovie} />
-
-      {/* pagination */}
-      <Pagination />
+      <PopularPage searchInput={searchInput} setSelectedMovie={setSelectedMovie} />
 
       {/* modal */}
       {selectedMovie && (

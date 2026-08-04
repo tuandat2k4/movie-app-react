@@ -22,7 +22,6 @@ const moviesData = [
     tagline: "Witness the beginning of a new dynasty.",
     production: ["Marvel Studios"],
   },
-
   {
     id: 2,
     title: "Air",
