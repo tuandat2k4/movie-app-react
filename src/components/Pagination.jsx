@@ -6,6 +6,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 48px;
+
+  @media (max-width: 480px) {
+    margin-top: 32px;
+  }
 `;
 const Button = styled.button`
   display: flex;
@@ -19,16 +23,30 @@ const Button = styled.button`
   &:hover {
     background-color: ${theme.colors.text};
   }
+
+  @media (max-width: 480px) {
+    width: 52px;
+    height: 52px;
+  }
 `;
 const Page = styled.div`
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
   color: ${theme.colors.white};
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 const Icon = styled.img`
   width: 32px;
   height: 32px;
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 const Pagination = ({ currentPage, totalPages, onChange }) => {

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { movieApi } from "@/api/movie.api";
 import { useFetch } from "@/hooks/useFetch";
 import Pagination from "@/components/Pagination";
-import { useState } from "react";
 
 const Section = styled.section`
   margin-top: 80px;
@@ -13,16 +12,32 @@ const Title = styled.h2`
   font-size: 50px;
   font-weight: 600;
   line-height: 1.1;
+
+  @media (max-width: 480px) {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
 `;
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   row-gap: 100px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    row-gap: 40px;
+  }
 `;
 
-const PopularPage = ({ searchInput, setSelectedMovie }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const PopularPage = ({
+  searchInput,
+  setSelectedMovie,
+  currentPage,
+  setCurrentPage,
+}) => {
   const {
     data: movies,
     isLoading,
@@ -31,6 +46,7 @@ const PopularPage = ({ searchInput, setSelectedMovie }) => {
     () => movieApi.search(searchInput, currentPage),
     [searchInput, currentPage],
   );
+  //console.log("currentPage:",currentPage);
   //console.log(movies?.data);
 
   const moviesData = movies?.data || [];
@@ -55,7 +71,11 @@ const PopularPage = ({ searchInput, setSelectedMovie }) => {
       </Container>
 
       {/* pagination */}
-      <Pagination currentPage={currentPage} totalPages={totalPages} onChange={setCurrentPage}/>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onChange={setCurrentPage}
+      />
     </Section>
   );
 };

@@ -11,7 +11,12 @@ const Container = styled.div`
   background-color: ${theme.colors.card};
   border-radius: 10px;
   padding: 0 10px;
-  margin-top: 20px
+  margin-top: 20px;
+
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 50px;
+  }
 `
 const SearchIcon = styled.img`
   width: 20px;
@@ -25,14 +30,20 @@ const Input = styled.input`
   }
 `
 
-const SearchInput = ({ searchInput, setSearchInput }) => {
+const SearchInput = ({ searchInput, setSearchInput, setCurrentPage }) => {
+
+  const handleChange = (e) => {
+    setSearchInput(e.target.value);
+    setCurrentPage(1);
+  }
+
   return (
     <Container>
       <SearchIcon src="/search.svg" alt="Search" />
       <Input
         type="text"
         value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
+        onChange={handleChange}
         placeholder="Search..."
       />
     </Container>
