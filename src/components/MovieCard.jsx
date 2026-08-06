@@ -18,6 +18,12 @@ const Poster = styled.img`
   border-radius: 30px;
   object-fit: cover;
   padding: 20px;
+
+  @media (max-width: 480px) {
+    height: autp;
+    aspect-ratio: 2/3;
+    padding: 10px;
+  }
 `;
 const SmallPoster = styled.img`
   position: relative;
@@ -27,12 +33,24 @@ const SmallPoster = styled.img`
   width: 150px;
   border-radius: 20px;
   object-fit: cover;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 70px;
+    aspect-ratio: 16/9;
+    margin-left: 0;
+  }
 `;
 const Title = styled.h3`
   font-size: 18px;
   font-weight: 600;
   color: ${theme.colors.white};
   margin-left: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-left: 12px;
+  }
 `;
 const InfoRow = styled.div`
   display: flex;
@@ -43,6 +61,13 @@ const InfoRow = styled.div`
   margin-top: auto;
   padding-top: 16px;
   padding-bottom: 10px;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    gap: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 `;
 const StarIcon = styled.img`
   width: 16px;
@@ -59,6 +84,13 @@ const Number = styled.span`
   left: -30px;
   bottom: 30px;
   z-index: 0;
+
+  @media (max-width: 480px) {
+    font-size: 50px;
+    left: -10px;
+    bottom: 10px;
+    -webkit-text-stroke: 1px #4b456d;
+  }
 `;
 
 const MovieCard = ({ movie, style, index, setSelectedMovie }) => {
@@ -78,7 +110,10 @@ const MovieCard = ({ movie, style, index, setSelectedMovie }) => {
             onError={() => setPosterError(true)}
           />
         ) : (
-          <SmallPoster src="/poster-not-available.png" alt="Poster Not Available" />
+          <SmallPoster
+            src="/poster-not-available.png"
+            alt="Poster Not Available"
+          />
         )}
       </div>
     );

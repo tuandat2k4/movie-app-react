@@ -34,6 +34,8 @@ const DetailMovie = styled.div`
   grid-template-columns: 180px 1fr;
   margin-top: 10px;
   row-gap: 32px;
+
+  
 `;
 const DetailLabel = styled.span`
   color: ${theme.colors.textInfoMovie};

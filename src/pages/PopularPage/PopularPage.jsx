@@ -14,7 +14,7 @@ const Title = styled.h2`
   line-height: 1.1;
 
   @media (max-width: 480px) {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     font-size: 28px;
   }
 `;
@@ -27,8 +27,8 @@ const Container = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
-    gap: 20px;
-    row-gap: 40px;
+    gap: 30px;
+    row-gap: 60px;
   }
 `;
 

@@ -11,12 +11,23 @@ const Title = styled.h2`
   font-size: 50px;
   font-weight: bold;
   color: ${theme.colors.white};
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 `
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+
+  @media (max-width: 480px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 `
 
 const TrendingPage = ({ setSelectedMovie }) => {

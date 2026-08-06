@@ -11,6 +11,12 @@ const Detail = styled.div`
   padding: 20px;
   margin-top: 10px;
   gap: 32px;
+
+  
+  @media (max-width: 480px) {
+    padding: 10px;
+    gap: 20px;
+  }
 `;
 const DetailHeroSub = styled.div`
   display: flex;

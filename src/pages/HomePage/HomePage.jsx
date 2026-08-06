@@ -10,6 +10,10 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 480px) {
+    min-height: 50vh;
+  }
 `;
 const Logo = styled.img`
   width: 90.41px;
@@ -38,6 +42,8 @@ const Title = styled.h1`
   span {
     color: ${theme.colors.purple};
   }
+
+
 `;
 const HomePage = () => {
   return (

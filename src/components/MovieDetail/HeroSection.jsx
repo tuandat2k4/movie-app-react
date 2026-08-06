@@ -5,6 +5,11 @@ const Hero = styled.div`
   display: flex;
   gap: 8px;
   width: 100%;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 `;
 const Poster = styled.div`
   overflow: hidden;
@@ -14,6 +19,10 @@ const PosterImage = styled.img`
   width: 100%;
   height: 360px;
   object-fit: cover;
+
+  @media (max-width: 480px) {
+    height: 250px;
+  }
 `;
 const Backdrop = styled.div`
   flex: 1;
@@ -21,11 +30,16 @@ const Backdrop = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 24px;
+  
 `;
 const BackdropImage = styled.img`
   width: 100%;
   height: 360px;
   object-fit: cover;
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
 `;
 
 // tạo màu background trong suốt thử
