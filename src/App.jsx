@@ -4,11 +4,18 @@ import HomePage from "@/pages/HomePage/HomePage";
 import TrendingPage from "@/pages/TrendingPage/TrendingPage";
 import PopularPage from "@/pages/PopularPage/PopularPage";
 import SearchInput from "@/components/SearchInput";
+import { useFetch } from "@/hooks/useFetch";
+import { movieApi } from "./api";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
+  
+  const { data: movieDetail, isLoading } = useFetch(
+    () => selectedMovieId ? movieApi.getDetail(selectedMovieId) : null,
+    [selectedMovieId]
+  ) 
   return (
     <div>
       {/* home page */}
@@ -23,19 +30,19 @@ function App() {
       />
       
       {/* trending */}
-      <TrendingPage setSelectedMovie={setSelectedMovie} />
+      <TrendingPage setSelectedMovieId={setSelectedMovieId} />
 
       {/* popular */}
       <PopularPage
         searchInput={searchInput}
-        setSelectedMovie={setSelectedMovie}
+        setSelectedMovieId={setSelectedMovieId}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
 
       {/* modal */}
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} setSelectedMovie={setSelectedMovie} />
+      {movieDetail && (
+        <MovieModal movie={movieDetail} setSelectedMovieId={setSelectedMovieId} />
       )}
     </div>
   );

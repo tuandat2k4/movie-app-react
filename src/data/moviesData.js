@@ -384,7 +384,8 @@ const moviesData = [
     id: 17,
     title: "Deadpool & Wolverine",
     poster: "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
     year: 2024,
     releaseDate: "2024-07-26",
     runtime: "2h 8m",
@@ -392,7 +393,8 @@ const moviesData = [
     category: "Action",
     type: "Movie",
     genres: ["Action", "Comedy", "Sci-Fi"],
-    overview: "Deadpool recruits Wolverine for a multiversal mission that could change everything.",
+    overview:
+      "Deadpool recruits Wolverine for a multiversal mission that could change everything.",
     languages: ["English"],
     countries: ["United States"],
     status: "Released",
@@ -405,7 +407,8 @@ const moviesData = [
     id: 18,
     title: "Inside Out 2",
     poster: "https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/stKGOm8UyhuLPR9sZLjs5AkmncA.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/stKGOm8UyhuLPR9sZLjs5AkmncA.jpg",
     year: 2024,
     releaseDate: "2024-06-14",
     runtime: "1h 36m",
@@ -426,7 +429,8 @@ const moviesData = [
     id: 19,
     title: "Godzilla x Kong: The New Empire",
     poster: "https://image.tmdb.org/t/p/w500/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/2nPhBHfzhEmXl2Q5A6QxV4l9P3B.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/2nPhBHfzhEmXl2Q5A6QxV4l9P3B.jpg",
     year: 2024,
     releaseDate: "2024-03-29",
     runtime: "1h 55m",
@@ -447,7 +451,8 @@ const moviesData = [
     id: 20,
     title: "Kingdom of the Planet of the Apes",
     poster: "https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/foSvSWlDsJ8YuWjKf7Vr8t3R5qt.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/foSvSWlDsJ8YuWjKf7Vr8t3R5qt.jpg",
     year: 2024,
     releaseDate: "2024-05-10",
     runtime: "2h 25m",
@@ -455,7 +460,8 @@ const moviesData = [
     category: "Sci-Fi",
     type: "Movie",
     genres: ["Sci-Fi", "Adventure"],
-    overview: "Generations after Caesar, a young ape questions the future of his world.",
+    overview:
+      "Generations after Caesar, a young ape questions the future of his world.",
     languages: ["English"],
     countries: ["United States"],
     status: "Released",
@@ -468,7 +474,8 @@ const moviesData = [
     id: 21,
     title: "Furiosa: A Mad Max Saga",
     poster: "https://image.tmdb.org/t/p/w500/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/oBIQDKcqNxKckjugtmzpIIOgoc4.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/oBIQDKcqNxKckjugtmzpIIOgoc4.jpg",
     year: 2024,
     releaseDate: "2024-05-24",
     runtime: "2h 28m",
@@ -489,7 +496,8 @@ const moviesData = [
     id: 22,
     title: "The Fall Guy",
     poster: "https://image.tmdb.org/t/p/w500/aBkqu7EddWK7qmY4grL4I6edx2h.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/5zmiBoMzeeVdQ62no55JOJMY498.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/5zmiBoMzeeVdQ62no55JOJMY498.jpg",
     year: 2024,
     releaseDate: "2024-05-03",
     runtime: "2h 6m",
@@ -510,7 +518,8 @@ const moviesData = [
     id: 23,
     title: "Wonka",
     poster: "https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/yOm993lsJyPmBodlYjgpPwBjXP9.jpg",
     year: 2023,
     releaseDate: "2023-12-15",
     runtime: "1h 56m",
@@ -518,7 +527,8 @@ const moviesData = [
     category: "Fantasy",
     type: "Movie",
     genres: ["Fantasy", "Family"],
-    overview: "The early adventures of Willy Wonka before opening his famous factory.",
+    overview:
+      "The early adventures of Willy Wonka before opening his famous factory.",
     languages: ["English"],
     countries: ["United Kingdom"],
     status: "Released",
@@ -531,7 +541,8 @@ const moviesData = [
     id: 24,
     title: "The Marvels",
     poster: "https://image.tmdb.org/t/p/w500/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg",
     year: 2023,
     releaseDate: "2023-11-10",
     runtime: "1h 45m",
@@ -539,7 +550,8 @@ const moviesData = [
     category: "Action",
     type: "Movie",
     genres: ["Action", "Adventure", "Sci-Fi"],
-    overview: "Captain Marvel joins forces with Kamala Khan and Monica Rambeau.",
+    overview:
+      "Captain Marvel joins forces with Kamala Khan and Monica Rambeau.",
     languages: ["English"],
     countries: ["United States"],
     status: "Released",
@@ -552,7 +564,8 @@ const moviesData = [
     id: 25,
     title: "The Creator",
     poster: "https://image.tmdb.org/t/p/w500/vBZ0qvaRxqEhZwl6LWmruJqWE8Z.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/kIMYSzp1fH1H9adKplekLD9BuNi.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/kIMYSzp1fH1H9adKplekLD9BuNi.jpg",
     year: 2023,
     releaseDate: "2023-09-29",
     runtime: "2h 13m",
@@ -573,7 +586,8 @@ const moviesData = [
     id: 26,
     title: "Napoleon",
     poster: "https://image.tmdb.org/t/p/w500/jE5o7y9K6pZtWNNMEw3IdpHuncR.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/hz9g4A41qpv0E8qf9H6G6Yh2r6N.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/hz9g4A41qpv0E8qf9H6G6Yh2r6N.jpg",
     year: 2023,
     releaseDate: "2023-11-22",
     runtime: "2h 38m",
@@ -594,7 +608,8 @@ const moviesData = [
     id: 27,
     title: "Elemental",
     poster: "https://image.tmdb.org/t/p/w500/6oH378KUfCEitzJkm07r97L0RsZ.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/c6Splshb8lb2Q9OvUfhpqXl7uP0.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/c6Splshb8lb2Q9OvUfhpqXl7uP0.jpg",
     year: 2023,
     releaseDate: "2023-06-16",
     runtime: "1h 42m",
@@ -602,7 +617,8 @@ const moviesData = [
     category: "Animation",
     type: "Movie",
     genres: ["Animation", "Family", "Comedy"],
-    overview: "Fire and water discover they have more in common than they imagined.",
+    overview:
+      "Fire and water discover they have more in common than they imagined.",
     languages: ["English"],
     countries: ["United States"],
     status: "Released",
@@ -615,7 +631,8 @@ const moviesData = [
     id: 28,
     title: "Transformers: Rise of the Beasts",
     poster: "https://image.tmdb.org/t/p/w500/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/gsVC7Y4bQJ1GY5bYl8A6npG6AsD.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/gsVC7Y4bQJ1GY5bYl8A6npG6AsD.jpg",
     year: 2023,
     releaseDate: "2023-06-09",
     runtime: "2h 7m",
@@ -636,7 +653,8 @@ const moviesData = [
     id: 29,
     title: "Blue Beetle",
     poster: "https://image.tmdb.org/t/p/w500/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/H6j5smdpRqP9a8UnhWp6zfl0SC.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/H6j5smdpRqP9a8UnhWp6zfl0SC.jpg",
     year: 2023,
     releaseDate: "2023-08-18",
     runtime: "2h 7m",
@@ -657,7 +675,8 @@ const moviesData = [
     id: 30,
     title: "Aquaman and the Lost Kingdom",
     poster: "https://image.tmdb.org/t/p/w500/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg",
     year: 2023,
     releaseDate: "2023-12-22",
     runtime: "2h 4m",
@@ -678,7 +697,8 @@ const moviesData = [
     id: 31,
     title: "The Flash",
     poster: "https://image.tmdb.org/t/p/w500/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/yF1eOkaYvwiORauRCPWznV9xVvi.jpg",
     year: 2023,
     releaseDate: "2023-06-16",
     runtime: "2h 24m",
@@ -699,7 +719,8 @@ const moviesData = [
     id: 32,
     title: "The Equalizer 3",
     poster: "https://image.tmdb.org/t/p/w500/p0WBnzgyqxMxbF4UGiqTwBLnwht.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/h48X0QTh4TQnSgJkLmB5mY8LQhM.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/h48X0QTh4TQnSgJkLmB5mY8LQhM.jpg",
     year: 2023,
     releaseDate: "2023-09-01",
     runtime: "1h 49m",
@@ -720,7 +741,8 @@ const moviesData = [
     id: 33,
     title: "Killers of the Flower Moon",
     poster: "https://image.tmdb.org/t/p/w500/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/kYgQzzjNis5jJalYtIHgrom0gOx.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/kYgQzzjNis5jJalYtIHgrom0gOx.jpg",
     year: 2023,
     releaseDate: "2023-10-20",
     runtime: "3h 26m",
@@ -741,7 +763,8 @@ const moviesData = [
     id: 34,
     title: "A Quiet Place: Day One",
     poster: "https://image.tmdb.org/t/p/w500/hU42CRk14JuPEdqZG3AWmagiPAP.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/6XjMwQTvnICBz6TguiDKkDVHvgS.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/6XjMwQTvnICBz6TguiDKkDVHvgS.jpg",
     year: 2024,
     releaseDate: "2024-06-28",
     runtime: "1h 39m",
@@ -762,7 +785,8 @@ const moviesData = [
     id: 35,
     title: "Civil War",
     poster: "https://image.tmdb.org/t/p/w500/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/en3GU5uGkKaYmSyetHV4csHHiH3.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/en3GU5uGkKaYmSyetHV4csHHiH3.jpg",
     year: 2024,
     releaseDate: "2024-04-12",
     runtime: "1h 49m",
@@ -783,7 +807,8 @@ const moviesData = [
     id: 36,
     title: "Twisters",
     poster: "https://image.tmdb.org/t/p/w500/pjnD08FlMAIXsfOLKQbvmO0f0MD.jpg",
-    backdrop: "https://image.tmdb.org/t/p/original/5yzcU4wW5M1c0KXHfV4sYH9wHVm.jpg",
+    backdrop:
+      "https://image.tmdb.org/t/p/original/5yzcU4wW5M1c0KXHfV4sYH9wHVm.jpg",
     year: 2024,
     releaseDate: "2024-07-19",
     runtime: "2h 2m",
@@ -791,7 +816,8 @@ const moviesData = [
     category: "Action",
     type: "Movie",
     genres: ["Action", "Adventure", "Thriller"],
-    overview: "Storm chasers confront the most dangerous tornado season in history.",
+    overview:
+      "Storm chasers confront the most dangerous tornado season in history.",
     languages: ["English"],
     countries: ["United States"],
     status: "Released",

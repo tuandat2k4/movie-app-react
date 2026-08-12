@@ -1,29 +1,41 @@
-import moviesData from "@/data/moviesData.js"
 
-const PAGE_SIZE = 8;
+import { http, MOVIE_ENDPOINTS } from ".";
+import { mapMovieCard, mapMovieDetail, mapMovieList } from "@/services/movie.service";
+
 export const movieApi = {
 
-    search: async (query = "", page = 1, limit = PAGE_SIZE) => {
-        let result = moviesData; 
-        const keyword = query.trim().toLowerCase();
-
-        //1. filter phim
-        if(keyword) {
-            result = moviesData.filter(movie => 
-                movie.title.toLowerCase().includes(keyword)
-            )
-        }
-        
-        //2. pagination
-        const start = (page - 1) * limit;
-        const end = start + limit;
-        const paginated = result.slice(start, end)
-
+    getTrending: async () => {
+        const response = await http.get(MOVIE_ENDPOINTS.TRENDING_MOVIES)
         return {
-            data: paginated,
-            total: result.length,
-            totalPages: Math.ceil(result.length / limit),
-            currentPage: page,
+            ...response,
+            results: response.data?.results?.slice(0, 6).map(mapMovieCard) || []
         }
-    }   
+    },
+
+    getPopular: async (page = 1) => {
+        const response = await http.get(MOVIE_ENDPOINTS.POPULAR_MOVIES, {
+            params: { page , language: 'en-US'}
+        }) 
+        return mapMovieList(response.data);
+    },
+
+    search: async (query = '', page = 1) => {
+        if (!query.trim()) return movieApi.getPopular(page);
+        const response = await http.get(MOVIE_ENDPOINTS.SEARCH_MOVIES, {
+            params: { query, page, language: 'en-US'},
+        })
+        return mapMovieList(response.data);
+    },
+
+    getDetail: async (movieId) => {
+        const response = await http.get(MOVIE_ENDPOINTS.MOVIE_DETAIL(movieId), {
+            params: { language: 'en-US'},
+        })
+        return mapMovieDetail(response.data);
+    },
+
+    getTrailerVideo: async (movieId) => {
+        const response = await http.get(MOVIE_ENDPOINTS.TRAILER_VIDEO(movieId))
+        return response.data?.results?.find(video => video.type === 'Trailer')
+    }
 }

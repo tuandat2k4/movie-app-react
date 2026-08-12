@@ -1,7 +1,7 @@
 import axios from 'axios'
 import TMDB_CONFIG from '../constants/config'
 
-const http = axios.create({
+export const http = axios.create({
     baseURL: TMDB_CONFIG.BASE_URL,
     timeout: TMDB_CONFIG.TIMEOUT
 })
@@ -19,3 +19,4 @@ http.interceptors.request.use(
         return Promise.reject(error);
     }
 )
+

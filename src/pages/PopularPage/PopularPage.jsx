@@ -34,38 +34,40 @@ const Container = styled.div`
 
 const PopularPage = ({
   searchInput,
-  setSelectedMovie,
+  setSelectedMovieId,
   currentPage,
   setCurrentPage,
 }) => {
   const {
-    data: movies,
-    isLoading,
+    data: searchMovies,
     isError,
   } = useFetch(
     () => movieApi.search(searchInput, currentPage),
     [searchInput, currentPage],
   );
-  //console.log("currentPage:",currentPage);
-  //console.log(movies?.data);
 
-  const moviesData = movies?.data || [];
-  const totalPages = movies?.totalPages || 1;
+  const { data: popularMovies, isLoading: isLoadingPopular } = useFetch(
+    () => movieApi.getPopular(currentPage),
+    [currentPage],
+  );
+  // console.log(popularMovies);
+
+  const totalPages = popularMovies?.totalPages || searchMovies?.totalPages ||1;
 
   //sau này thay bằng component <Spinner /> => vòng xoay loading
   //và isError.message
-  if (isLoading) return <div>Loading....</div>;
+  if (isLoadingPopular) return <div>Loading....</div>;
   if (isError) return <div>Có lỗi khi fetch</div>;
 
   return (
     <Section>
       <Title>Popular</Title>
       <Container>
-        {moviesData.map((movie) => (
+        {(popularMovies?.data || []).map((movie) => (
           <MovieCard
             key={movie.id}
             movie={movie}
-            setSelectedMovie={setSelectedMovie}
+            setSelectedMovieId={setSelectedMovieId}
           />
         ))}
       </Container>

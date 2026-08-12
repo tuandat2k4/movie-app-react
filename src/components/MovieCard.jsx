@@ -93,14 +93,14 @@ const Number = styled.span`
   }
 `;
 
-const MovieCard = ({ movie, style, index, setSelectedMovie }) => {
+const MovieCard = ({ movie, style, index, setSelectedMovieId }) => {
   const [posterError, setPosterError] = useState(false);
   // Nếu là card ở mục trending thì sẽ return cái này
   if (style === "trending") {
     return (
       <div
         style={{ position: "relative", cursor: "pointer" }}
-        onClick={() => setSelectedMovie(movie)}
+        onClick={() => setSelectedMovieId(movie.id)}
       >
         <Number>{index + 1}</Number>
         {!posterError ? (
@@ -119,7 +119,7 @@ const MovieCard = ({ movie, style, index, setSelectedMovie }) => {
     );
   }
   return (
-    <CardContainer onClick={() => setSelectedMovie(movie)}>
+    <CardContainer onClick={() => setSelectedMovieId(movie.id)}>
       {movie.poster && !posterError ? (
         <Poster
           src={movie.poster}

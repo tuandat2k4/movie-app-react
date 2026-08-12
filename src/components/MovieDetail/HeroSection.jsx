@@ -30,8 +30,8 @@ const Backdrop = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  
 `;
+
 const BackdropImage = styled.img`
   width: 100%;
   height: 360px;
@@ -63,23 +63,28 @@ const Button = styled.button`
   transition: background 0.3s ease;
   &:hover {
     background: rgba(255,255,255,0.3);
+    cursor: pointer;
   }
 `;
 const ButtonLeft = styled.div`
   text-align: left;
 `;
-const PlayText = styled.button`
+const PlayText = styled.div`
   width: 100px;
   font-weight: 600;
   text-align: left;
-  color: ${theme.colors.white};;
-`;
-const Duration = styled.p`
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: ${theme.colors.white};
 `;
 
-const HeroSection = ({ movie }) => {
+
+const HeroSection = ({ movie, trailer }) => {
+  console.log(trailer)
+
+  const handlePlayTrailer = () => {
+    if (trailer) {
+      window.open(`https://www.youtube.com/watch?v=${trailer.key}`, "_blank");
+    }
+  };
   return (
     <Hero>
       <Poster>
@@ -94,21 +99,19 @@ const HeroSection = ({ movie }) => {
           alt={movie.title}
         />
         <Overlay />
-        <Button>
+        <Button onClick={handlePlayTrailer}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="white"
             width={20}
             height={20}
-            style={{ marginRight: '10px'}}
+            style={{ marginRight: "10px" }}
           >
             <path d="M8 5v14l11-7z" />
           </svg>
-
           <ButtonLeft>
             <PlayText>Trailer</PlayText>
-            <Duration>2:31</Duration>
           </ButtonLeft>
         </Button>
       </Backdrop>

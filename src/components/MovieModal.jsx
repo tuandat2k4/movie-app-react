@@ -60,14 +60,14 @@ const CloseIcon = styled.span`
     font-size: 20px;
   }
 `
-const MovieModal = ({ movie, setSelectedMovie }) => {
+const MovieModal = ({ movie, setSelectedMovieId }) => {
   return (
-    <Modal onClick={() => setSelectedMovie(null)}>
-      <CloseButton onClick={() => setSelectedMovie(null)}>
+    <Modal onClick={() => setSelectedMovieId(null)}>
+      <CloseButton onClick={() => setSelectedMovieId(null)}>
         <CloseIcon>x</CloseIcon>
       </CloseButton>
       <Content>
-        <MovieDetail movie={movie} setSelectedMovie={setSelectedMovie} />
+        <MovieDetail movie={movie} />
       </Content>
     </Modal>
   );

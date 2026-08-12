@@ -34,8 +34,6 @@ const DetailMovie = styled.div`
   grid-template-columns: 180px 1fr;
   margin-top: 10px;
   row-gap: 32px;
-
-  
 `;
 const DetailLabel = styled.span`
   color: ${theme.colors.textInfoMovie};
@@ -52,11 +50,12 @@ const DetailText = styled.span`
 `;
 
 const InfoSection = ({ movie }) => {
+  // console.log(movie)
   return (
     <DetailMovie>
       <DetailLabel>Genres</DetailLabel>
       <DetailGenres>
-        {movie.genres.map((genre) => (
+        {(movie.genres || []).map((genre) => (
           <DetailGenre key={genre}>{genre}</DetailGenre>
         ))}
         <DetailGenreLink href="#">Visit Homepage →</DetailGenreLink>
@@ -69,7 +68,7 @@ const InfoSection = ({ movie }) => {
       <DetailLabel>Countries</DetailLabel>
 
       <DetailArray>
-        {movie.countries.map((country) => (
+        {(movie.countries || []).map((country) => (
           <Group key={country}>
             <DetailText>{country}</DetailText>
           </Group>
@@ -81,7 +80,7 @@ const InfoSection = ({ movie }) => {
 
       <DetailLabel>Language</DetailLabel>
       <DetailArray>
-        {movie.languages.map((lang, index) => (
+        {(movie.languages || []).map((lang, index) => (
           <Group key={`${lang}-${index}`}>
             <DetailText>{lang}</DetailText>
           </Group>
@@ -99,7 +98,7 @@ const InfoSection = ({ movie }) => {
 
       <DetailLabel>Production Companies</DetailLabel>
       <DetailArray>
-        {movie.production.map((company) => (
+        {(movie.production || []).map((company) => (
           <Group key={company}>
             <DetailText>{company}</DetailText>
           </Group>

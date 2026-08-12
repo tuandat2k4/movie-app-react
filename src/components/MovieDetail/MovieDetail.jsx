@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import HeroSection from "./HeroSection";
 import InfoSection from "./InfoSection";
+import { useFetch } from "@/hooks/useFetch";
+import { movieApi } from "@/api";
 
 const Detail = styled.div`
   width: 100%;
@@ -26,8 +28,14 @@ const DetailHeroSub = styled.div`
 const DetailHeroTitle = styled.div`
   font-size: 24px;
   font-weight: 600;
+
 `
 const MovieDetail = ({ movie }) => {
+
+  const {data: trailerVideo} = useFetch(
+    () => movieApi.getTrailerVideo(movie.id),
+    [movie.id]
+  ) 
   return (
     <Detail onClick={(e) => e.stopPropagation()}>
       <div>
@@ -38,7 +46,7 @@ const MovieDetail = ({ movie }) => {
           <div>{movie.runtime}</div>
         </DetailHeroSub>
       </div>
-      <HeroSection movie={movie} />
+      <HeroSection movie={movie} trailer={trailerVideo}/>
       <InfoSection movie={movie} />
     </Detail>
   );

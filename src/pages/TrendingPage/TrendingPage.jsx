@@ -1,11 +1,13 @@
-import moviesData from "@/data/moviesData";
+
 import MovieCard from "@/components/MovieCard";
 import styled from "styled-components";
 import theme from "@/styles/theme";
+import { useFetch } from "@/hooks/useFetch";
+import { movieApi } from "@/api";
 
 const Section = styled.section`
   margin-top: 16px;
-`
+`;
 const Title = styled.h2`
   margin-bottom: 10px;
   font-size: 50px;
@@ -16,7 +18,7 @@ const Title = styled.h2`
     font-size: 28px;
     margin-bottom: 20px;
   }
-`
+`;
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -28,9 +30,17 @@ const Container = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-`
+`;
 
-const TrendingPage = ({ setSelectedMovie }) => {
+const TrendingPage = ({ setSelectedMovieId }) => {
+  const { data: trendingMovies, isLoading } = useFetch(
+    () => movieApi.getTrending(),
+    [],
+  );
+  // console.log(trendingMovies)
+  if (isLoading) return <div>Loading...</div>;
+  const moviesData = trendingMovies?.results || [];
+  // console.log(moviesData)
   return (
     <Section>
       <Title>Trending</Title>
@@ -40,7 +50,7 @@ const TrendingPage = ({ setSelectedMovie }) => {
             key={movie.id}
             movie={movie}
             index={index}
-            setSelectedMovie={setSelectedMovie}
+            setSelectedMovieId={setSelectedMovieId}
             style="trending"
           />
         ))}
