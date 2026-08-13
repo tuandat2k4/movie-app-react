@@ -12,14 +12,14 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedMovieId, setSelectedMovieId] = useState(null);
   
-  const { data: movieDetail, isLoading } = useFetch(
+  const { data: movieDetail} = useFetch(
     () => selectedMovieId ? movieApi.getDetail(selectedMovieId) : null,
     [selectedMovieId]
   ) 
   return (
     <div>
       {/* home page */}
-      <HomePage searchInput={searchInput} setSearchInput={setSearchInput} />
+      <HomePage />
       
       {/* search input */}
       <SearchInput

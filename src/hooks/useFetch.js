@@ -9,6 +9,7 @@ export const useFetch = (fetchFunc, deps) => {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
+      setIsError(null);
 
       try {
         const response = await fetchFunc();

@@ -1,4 +1,3 @@
-
 import MovieCard from "@/components/MovieCard";
 import styled from "styled-components";
 import theme from "@/styles/theme";
@@ -27,9 +26,16 @@ const Container = styled.div`
 
   @media (max-width: 480px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+
+  // @media (max-width: 480px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: 12px;
+  // }
 `;
 
 const TrendingPage = ({ setSelectedMovieId }) => {

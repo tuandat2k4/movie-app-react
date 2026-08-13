@@ -42,9 +42,8 @@ const Title = styled.h1`
   span {
     color: ${theme.colors.purple};
   }
-
-
 `;
+
 const HomePage = () => {
   return (
     <>

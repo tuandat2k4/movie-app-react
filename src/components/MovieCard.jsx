@@ -20,25 +20,24 @@ const Poster = styled.img`
   padding: 20px;
 
   @media (max-width: 480px) {
-    height: autp;
-    aspect-ratio: 2/3;
-    padding: 10px;
+    height: 220px;
+    padding: 12px;
   }
 `;
 const SmallPoster = styled.img`
   position: relative;
   z-index: 10;
-  margin-left: 10px;
+  margin-left: 20px;
   height: 200px;
   width: 150px;
   border-radius: 20px;
   object-fit: cover;
 
   @media (max-width: 480px) {
-    width: 100%;
-    height: 70px;
+    width: 170px;
+    height: 80px;
     aspect-ratio: 16/9;
-    margin-left: 0;
+    margin-left: 7px;
   }
 `;
 const Title = styled.h3`

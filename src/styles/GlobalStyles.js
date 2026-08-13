@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import theme from "./theme"
+import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
 
 //ÁP CHO TOÀN BỘ APP
 const GlobalStyles = createGlobalStyle`
@@ -14,8 +14,15 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
     min-height: 100vh;
-    padding-left: 80px;
-    padding-right: 80px;
+
+    @media (max-width: 768px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @media (min-width: 769px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
   }
 
   .no-scrollbar::-webkit-scrollbar {
